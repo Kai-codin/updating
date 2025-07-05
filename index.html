@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>We're Updating | MyBusTimes</title>
+  <title>We're Reimporting Data | MyBusTimes</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -94,15 +94,16 @@
 </head>
 <body>
   <div class="container">
-    <h1 id="text">We're Updating MyBusTimes</h1>
+    <h1 id="text">MyBusTimes Is Reimporting Data</h1>
     <div class="loader" id="loader"></div>
     <div class="checkmark" id="checkmark">
       <svg viewBox="0 0 52 52">
         <path fill="none" stroke="#28a745" stroke-width="6" d="M10 30 L22 42 L40 18"/>
       </svg>
     </div>
-    <p>We're currently rolling out some updates to improve your experience.</p>
-    <p>MyBusTimes will be back online by <strong>7:30 PM</strong> - thanks for your patience!</p>
+    <p>We're performing a full data reimport due to missing or lost records.</p>
+    <p>The service is expected to be back online within <strong>5 hours</strong>.</p>
+    <p>We'll send out another announcement once MyBusTimes is back up and running. Thank you for your patience!</p>
     <div class="links">
       <p>Stay updated:</p>
       <a href="https://status.mybustimes.cc">📢 Status Page</a> |
@@ -128,7 +129,7 @@
           const titleMatch = html.match(/<title>(.*?)<\/title>/);
           if (titleMatch && titleMatch[1]) {
             const pageTitle = titleMatch[1];
-            if (pageTitle !== "We're Updating | MyBusTimes" && pageTitle !== "Maintenance | MyBusTimes") {
+            if (pageTitle !== "We're Reimporting Data | MyBusTimes" && pageTitle !== "Maintenance | MyBusTimes") {
               document.getElementById("loader").style.display = "none";
               document.getElementById("checkmark").style.display = "block";
               document.getElementById("text").textContent = "We're Back Online!";
